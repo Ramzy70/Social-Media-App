@@ -8,7 +8,10 @@ const userRoute = require("./routes/users")
 const authRoute = require("./routes/auth")
 const postRoute = require("./routes/posts")
 
-const app = express()
+var app = express()
+
+var cors = require('cors');
+app.use(cors());
 
 const connectDB = async () => {
     try {
