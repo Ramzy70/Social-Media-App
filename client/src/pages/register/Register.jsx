@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./register.css";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link } from 'react-router-dom';
 
 export default function Register() {
   const username = useRef()
@@ -33,9 +33,9 @@ export default function Register() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Lamasocial</h3>
+          <h3 className="loginLogo">SocialMedia</h3>
           <span className="loginDesc">
-            Connect with friends and the world around you on Lamasocial.
+            Connect with friends and the world around you on SocialMedia.
           </span>
         </div>
         <div className="loginRight">
@@ -71,9 +71,9 @@ export default function Register() {
             <button className="loginButton" type="submit">
               Sign Up
             </button>
-            <button className="loginRegisterButton">
-              Log Into Account
-            </button>
+            <Link to="/login" className="loginRegisterButton">
+              Already have an account?
+            </Link>
           </form>
         </div>
       </div>
